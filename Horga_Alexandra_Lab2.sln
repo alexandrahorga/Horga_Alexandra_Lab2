@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horga_Alexandra_Lab2", "Horga_Alexandra_Lab2.csproj", "{CC1C294E-D254-4239-919C-1C84F10851F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC1C294E-D254-4239-919C-1C84F10851F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1C294E-D254-4239-919C-1C84F10851F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1C294E-D254-4239-919C-1C84F10851F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1C294E-D254-4239-919C-1C84F10851F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2131AC36-DE8A-49CE-B2B0-27FF50B57FCD}
+	EndGlobalSection
+EndGlobal
