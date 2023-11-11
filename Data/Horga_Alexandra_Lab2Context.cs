@@ -9,6 +9,8 @@ namespace Horga_Alexandra_Lab2.Data
 {
     public class Horga_Alexandra_Lab2Context : DbContext
     {
+        internal readonly IEnumerable<object> Author;
+
         public Horga_Alexandra_Lab2Context (DbContextOptions<Horga_Alexandra_Lab2Context> options)
             : base(options)
         {
@@ -18,15 +20,11 @@ namespace Horga_Alexandra_Lab2.Data
 
         public DbSet<Horga_Alexandra_Lab2.Models.Publisher>? Publisher { get; set; }
 
-        public DbSet<Author> Authors { get; set; }
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Horga_Alexandra_Lab2.Models.Category>? Category { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Book>()
-                .HasOne(b => b.Author)
-                .WithMany(a => a.Books)
-                .HasForeignKey(b => b.AuthorID);
-        }
+       
+      
+
+        
     }
 }
