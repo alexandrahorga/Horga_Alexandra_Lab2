@@ -14,11 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Books\Index.cshtml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Pages\Books\Index.cshtml" />
+    <Content Remove="Pages\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,6 +9,8 @@ namespace Horga_Alexandra_Lab2.Data
 {
     public class Horga_Alexandra_Lab2Context : DbContext
     {
+        internal readonly IEnumerable<object> Author;
+
         public Horga_Alexandra_Lab2Context (DbContextOptions<Horga_Alexandra_Lab2Context> options)
             : base(options)
         {
