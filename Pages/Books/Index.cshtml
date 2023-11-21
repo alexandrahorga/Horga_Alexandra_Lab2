@@ -10,14 +10,28 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by Book Title / Author Name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.TitleSort">
                 @Html.DisplayNameFor(model => model.Book[0].Title)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Author)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.AuthorSort">
+                    @Html.DisplayNameFor(model => model.Book[0].Author)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Price)
@@ -25,7 +39,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].PublishingDate)
             </th>
-            <th>
+            <th colspan="2">
                 @Html.DisplayNameFor(model => model.Book[0].Publisher)
             </th>
             <th>
@@ -36,13 +50,15 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Book) 
+
+        @foreach (var item in Model.BookD.Books) 
         { string selectedRow =  "";
-        if (item.ID == Model.BookID)
+         if (item.ID == Model.BookID)
             {
            selectedRow = "table-success";
             }
          <tr class="@selectedRow">
+        
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
