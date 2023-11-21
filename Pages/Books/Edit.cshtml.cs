@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Horga_Alexandra_Lab2.Data;
 using Horga_Alexandra_Lab2.Models;
+using System.Collections;
+
 namespace Horga_Alexandra_Lab2.Pages.Books
 {
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Horga_Alexandra_Lab2.Data.Horga_Alexandra_Lab2Context _context;
+        private IEnumerable authorList;
+
         public EditModel(Horga_Alexandra_Lab2.Data.Horga_Alexandra_Lab2Context context)
         {
             _context = context;
@@ -38,14 +42,15 @@ namespace Horga_Alexandra_Lab2.Pages.Books
             //apelam PopulateAssignedCategoryData pentru o obtine informatiile necesare checkbox-
             //urilor folosind clasa AssignedCategoryData
             PopulateAssignedCategoryData(_context, Book);
-            var authorList = _context.Author.Select(x => new
+            /*var authorList = _context.Author.Select(x => new
             {
                 ID = x.ID,
                 FullName = x.LastName
                            + " "
                            + x.FirstName
             }).ToList();
-            ViewData["AuthorID"] = new SelectList(authorList, "ID", "FullName");
+            */
+            ViewData["AuthorID"] = new SelectList(_context.Author_1, "ID", "FullName");
             ViewData["PublisherID"] = new SelectList(_context.Publisher, "ID",
            "PublisherName");
             return Page();

@@ -22,6 +22,8 @@ namespace Horga_Alexandra_Lab2.Data
 
         public DbSet<Horga_Alexandra_Lab2.Models.Category>? Category { get; set; }
 
+        public DbSet<Horga_Alexandra_Lab2.Models.Author>? Author_1 { get; set; }
+
        
       
 
